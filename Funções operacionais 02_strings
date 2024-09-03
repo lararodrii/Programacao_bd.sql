@@ -20,11 +20,11 @@ SELECT ' string com espaços nas extremidades ';
 select TRIM(' string com espaços nas extremiodades ');
 
 -- 01.6 A função REGEXP_SUBSTR procura um determinado padrão (segundo argumento) numa string informada (primeiro argumento)
-SELECT REGEXP_SUBSTR('Tem um número 12 no meio desta string, '\\d+')
+SELECT REGEXP_SUBSTR('Tem um número 12 no meio desta string', '\\d+')
 
---02. Criando nova tabela 
+-- 02. Criando nova tabela 
 CREATE TABLE cliente_experimentos (
-id INT PIRMARY KEY,
+id INT PRIMARY KEY,
 nome_completo VARCHAR(255),
 email VARCHAR(255),
 telefone VARCHAR(20)
@@ -37,13 +37,13 @@ VALUES
 (2, 'Maria Luiza Oliveira', 'maria.luiza@gmail.com', '(21) 9876-5432'),
 (3, 'Carlos Eduardo Santos', 'carlos.eduardo@yahoo.com', '(31) 1111-2222'),
 (4,'Ana Beatriz Costas','ana.beatriz@gmail.com','(41) 3333-4444'),
-(5, 'Luíz Felipe Pereira', 'luiz.felipe@gmail.com', '(55) 5555-6666),
+(5, 'Luíz Felipe Pereira', 'luiz.felipe@gmail.com', '(55) 5555-6666'),
 (6, 'Rafaela Cristina Souza', 'rafaelqa.cristina@gmail.com', '(61) 7777-8888'),
 (7, 'Pedro Henrique Almeida', 'pedro.henrique@gmail.com', '(71) 9999-0000'),
 (8, 'Gabriela Oliveira Lima', 'grabriela.oliveira@gmail.com', '(81) 1234-56789'),
 (9, 'Felipe Augusto Rocha', 'felipe.augusto@gmail.com', '(91) 9874-5432'),
 (10, 'Isabela Cristina Ferreira', 'isabela.cristina@gmail.com', '(10) 1111-2222'),
-(11, 'Chico Buarque', 'chico.buarque@gmail.com', '(11)' 1234-5678),
+(11, 'Chico Buarque', 'chico.buarque@gmail.com', '(11) 1234-5678'),
 (12, 'Silva Buarque', 'silva.buarque@gmail.com', '(21) 9874-5632'),
 (13, 'Eduardo Bueno', 'eduardo.bueno@gmail.copm', '(31) 1111-2222'),
 (14, 'Mestre Sprinter', 'mestre.sprinter@gmail.com', '(41) 3333-4444'),
@@ -52,4 +52,4 @@ VALUES
 select * from clientes_experimentos;
  -- Consultando registros usando filtro where e expressão like
 SELECT * from clientes_experimentos where nome_completo LIKE 'Dr.%';
-SELECT * from clientes_experimentos whhere nome_completo LIKE '%ana%';
+SELECT * from clientes_experimentos where nome_completo LIKE '%ana%';
